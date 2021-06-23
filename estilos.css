@@ -1,0 +1,360 @@
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('fonts/sourcesanspro-regular-webfont.eot');
+    src: url('fonts/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/sourcesanspro-regular-webfont.woff') format('woff'),
+         url('fonts/sourcesanspro-regular-webfont.ttf') format('truetype'),
+         url('fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('fonts/sourcesanspro-bold-webfont.eot');
+    src: url('fonts/sourcesanspro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/sourcesanspro-bold-webfont.woff') format('woff'),
+         url('fonts/sourcesanspro-bold-webfont.ttf') format('truetype'),
+         url('fonts/sourcesanspro-bold-webfont.svg#source_sans_probold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+/* ---------- Estilos generales por --------- */
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html, body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	font: 18px 'Source Sans Pro', helvetica;
+}
+a{
+	text-decoration: none;
+	color: #2a95e5;
+}
+a:hover{
+	color: #0c2940;
+}
+img{max-width: 100% !important;}
+p{margin-bottom: 30px;}
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+h3 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+label {
+    color: #666;
+    font-size: 16px;
+    padding-left: 10px;
+}
+ul, ol {
+    margin-left: 25px;
+}
+li {
+    margin-bottom: 15px;
+}
+/* ---------- Sistema de rejillas --------- */
+.container{
+	width : 100%;
+	max-width : 1200px; 
+	margin: 0 auto;
+	padding: 0 12px;
+}
+.container:before, .container:after {
+    content:"";
+	display: table ;
+    clear:both;
+}
+.grid-container {
+	width : 100%;
+	max-width : 1200px; 
+	margin: 0 auto;
+}
+.row:before, .row:after {
+    content:"";
+	display: table ;
+    clear:both;
+}
+[class*="col-"] {
+    float: left;
+    min-height: 1px;
+    padding: 0 12px;
+    width: 16.66%;
+}
+.col-1{width: 16.66%;}
+.col-2{width: 33.33%;}
+.col-3{width: 50%;}
+.col-4{width: 66.664%;}
+.col-5{width: 83.33%;}
+.col-6{width: 100%;}
+.col-1-4{width: 25%;}
+@media all and (max-width:800px){
+	.col-1{width: 33.33%;}
+	.col-2{width: 50%;}
+    .col-3{width: 100%;}
+    .col-4{width: 100%;}
+    .col-5{width: 100%;}
+    .col-6{width: 100%;}
+    .col-1-4{width: 25%;}
+    .row .col-2:last-of-type{width: 100%;}
+    .row .col-5 ~ .col-1{width: 100%;}
+}
+@media all and (max-width:650px){
+    .col-1{width: 50%;}
+    .col-2{width: 100%;}
+    .col-3{width: 100%;}
+    .col-4{width: 100%;}
+    .col-5{width: 100%;}
+    .col-6{width: 100%;}
+    .col-1-4{width: 100%;}
+}
+.container.cont-600 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 600px;
+    padding: 30px;
+}
+@media all and (max-width: 650px){
+	.container.cont-600 {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding: 0px 20px;
+	}
+}
+/* ---------- Clases modificadoras ---------- */
+.centrar{margin: 0 auto;}
+.tcentrar{text-align: center;}
+.tder{text-align: right;}
+.fder{float: right;}
+.fizq{float: left;}
+/* ---------- Barra de navegacion superior ---------- */
+.barranav{
+	background-color: #f0f0f0;
+}
+.barranav:before, .barranav:after {
+    content:"";
+	display: table ;
+    clear:both;
+}
+.barranav ul{
+	display: inline-block;
+	margin: 0;
+}
+@media all and (max-width:980px){
+	.barranav ul{
+		float: left;
+	}
+}
+.barranav ul li{
+	display: inline-block;
+	margin: 0;
+}
+.menunav a {
+    color: #000;
+    display: block;
+    font-size: 20px;
+    line-height: 35px;
+    padding: 10px 20px;
+}
+.menunav a:hover{
+    background-color: #e0e0e0;
+}
+.logocont{
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 20px;
+    padding: 10px 0;
+    text-transform: uppercase;
+	float: left;
+	display: inline-block;
+	color: #000;
+}
+@media all and (max-width: 360px){
+	.logocont{
+		float: none;
+		display: block;
+	}
+	.barranav ul{
+		float: none;
+		display: block;
+		margin: 0;
+	}
+	.barranav ul li{
+		display: block;
+		margin: 0;
+	}
+	.barranav ul a{
+		display: block;
+	}
+}
+/* ---------- Navegacion Horizontal ---------- */
+#secondnav {
+    padding: 10px 0;
+}
+ul.horizontal {
+    padding: 0 12px;
+	margin: 0;
+}
+ul.horizontal li{
+	display: inline-block;
+	margin: 0;
+}
+ul.horizontal a {
+    color: #999;
+    display: block;
+    font-weight: bold;
+    padding: 15px;
+}
+ul.horizontal a:hover{
+    color: #000;
+}
+@media all and (max-width:800px){	
+	ul.horizontal li{
+		display: block;
+	}
+}
+/* ---------- Formulario Basico ---------- */
+.horizontal .form-in, .horizontal .form-btn {
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+}
+.horizontal .form-in {
+    border-color: #e0e0e0;
+    border-style: solid;
+    border-width: 1px 1px 1px 5px;
+    padding: 5px 10px;
+	width: 98%;
+}
+.horizontal .form-in:focus{
+	border-color: #66ccee;
+	box-shadow: 0 0 3px 0px #60ccee;
+}
+.horizontal .form-btn {
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    padding: 5px 20px;
+	background-color: #f0f0f0;
+}
+.horizontal .form-btn:hover{
+    background-color: #fafafa;
+}
+@media all and (min-width:650px){	
+	.horizontal .form-in{
+		width: 300px;
+	}
+}
+.form-in, .form-btn {
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+}
+.form-in {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+	width: 100%;
+}
+.form-in:focus{
+	border-color: #66ccee;
+	box-shadow: 0 0 3px 0px #60ccee;
+}
+.form-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 15px 40px;
+}
+.form-btn:hover{
+    background-color: #fafafa;
+}
+.form-btn.btn-block{
+	display: block;
+	width: 100%;
+}
+.form-campos {
+    margin-bottom: 15px;
+}
+.btn-azul {
+    background-color: #237cbf;
+    border: 1px solid #e0e0e0;
+	color: #fff;
+	font-weight: bold;
+}
+.btn-azul:hover{
+    background-color: #18537f;
+}
+/* ---------- Contenedores centrales ---------- */
+#marcadores {
+    padding: 20px 0;
+}
+.mcard {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.mctitle {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+.mcdatos span {
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px;
+}
+/* ---------- Estilos para la paginacion ----------- */
+.paginacion-t1 {
+    display: inline-block;
+	margin: 20px 10px;
+}
+.paginacion-t1 li {
+    display: inline-block;
+	margin: 0;
+}
+.paginacion-t1 a {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    display: block;
+    margin: 0 5px;
+    padding: 5px 12px;
+	font-weight: bold;
+}
+.paginacion-t1 a:hover{
+	background-color: #f9f9f9;
+	border-color: #aaa;
+}
+.paginacion-t1 a.active {
+	background-color: #f9f9f9;
+    border: 1px solid #aaa;
+	color: #0c2940;
+	cursor: default;
+}
+.paginacion-t1 a.active:hover{
+	background-color: #f9f9f9;
+	border-color: #aaa;
+	color: #0c2940;
+}
+/* ---------- Contenedores superiores ---------- */
+footer {
+    font-size: 16px;
+    padding: 20px 0;
+	color: #666;
+}
